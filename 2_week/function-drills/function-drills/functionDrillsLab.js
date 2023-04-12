@@ -19,7 +19,6 @@ helloWorld();
 
 
 ////////////////// PROBLEM 2 ////////////////////
-
 /*
     Write an arrow function called 'jsNinja' that 
     returns the string: 'I am a JavaScript ninja!'
@@ -68,7 +67,6 @@ function greeting(name) {
 printName("Winston"); // Hello neighbor!
 
 ////////////////// PROBLEM 5 ////////////////////
-
 /*
     Write an arrow function called 'compareNums' 
     that takes in 2 parameters, which will be numbers. 
@@ -96,6 +94,9 @@ compareNums = (x, y) => {
 
 compareNums(4, 5);
 
+// Brownie points Turnary operator edition:
+// const compareNums = (num1, num2) => num1 > num2 ? num1 : num2
+
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -109,10 +110,16 @@ compareNums(4, 5);
 */
 
 //CODE HERE
+function add(num, num2) {
+  num = + num
+  num2 = + num2
+  return num + num2
+}
+
+let sum = add(7, 3); // 10
 
 
 ////////////////// PROBLEM 7 ////////////////////
-
 /*
   Which syntax was used to create the function below?
   Uncomment the correct `console.log` underneath.
@@ -122,14 +129,12 @@ const exclaim = function(str) {
   return str.toUpperCase() + '!!!'
 }
 
-// console.log('arrow')
-// console.log('declaration')
-// console.log('expression')
-
+console.log('arrow')
+console.log('declaration')
+console.log('expression')
 
 
 ////////////////// PROBLEM 8 ////////////////////
-
 /*
   Which syntax was used to create the function below?
   Uncomment the correct `console.log` underneath.
@@ -152,7 +157,6 @@ const exclaimTwo = str => {
 
 
 ////////////////// PROBLEM 9 ////////////////////
-
 /*
   Which syntax was used to create the function below?
   Uncomment the correct `console.log` underneath.
@@ -177,6 +181,17 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
+function nameCheck(name) {
+  if(name === 'Steven') {
+    return "What's up Steven?"
+  } else if (name === 'Bryan') {
+    return "Hey Bryan!"
+  } else {
+    return `Cool name, ${name}`
+  }
+}
+
+let nameGreeting = nameCheck('Steven')
 
 
 ////////////////// PROBLEM 11 ////////////////////
@@ -190,10 +205,22 @@ function exclaimFour(str) {
 */
 
 //CODE HERE
+function faveColorFinder(color) {
+  if(color === "red") {
+    return "red is a great color"
+  } else if(color === "green") {
+    return "green is a solid favorite color"
+  } else if (color === "black") {
+    return "so trendy"
+  } else {
+    return "you need to evaluate your favorite color choice"
+  }
+}
+
+let colorRating = faveColorFinder('green')
 
 
 ////////////////// PROBLEM 12 ////////////////////
-let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 /*
   Create a function called printAllNames that takes in a single argument (an array of names).
   Using a for loop, iterate over that array and console log each name.
@@ -201,6 +228,15 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Kark'];
+
+function printAllNames(names) {
+  for(let i = 0; i < names.length; i++) {
+      console.log(names[i])
+  }
+}
+
+printAllNames(namesArr);
 
 
 ////////////////// PROBLEM 13 ////////////////////
@@ -212,10 +248,19 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+function thatsOdd(num) {
+  if(num % 2 === 0) {
+    return "That's not odd!"
+  } else {
+    return "That Is and Odd number!"
+  }
+}
+
+let oddChecker = thatsOdd(7)
+console.log(oddChecker)
 
 
 ////////////////// PROBLEM 14 ////////////////////
-
 /*
     Write a one line arrow function called 'bestMovie' that takes in one parameter,
     which will be a string of a movie title. 
@@ -225,6 +270,11 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 */
 
 //CODE HERE
+const bestMovie = title => {
+  return title + ' is the best movie ever!!'
+}
+
+console.log(bestMovie('That Movie'))
 
 
 ////////////////// PROBLEM 15 ////////////////////
@@ -239,6 +289,19 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
+function bigOrSmall(arr) {
+    let answers = []
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] > 100) {
+        answers.push("big")
+      } else {
+        answers.push("small")
+      }
+    }
+    return answers
+}
+
+let arrayEvaluator = bigOrSmall(bigOrSmallArray);
 
 
 ////////////////// PROBLEM 16 ////////////////////
@@ -250,6 +313,15 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
+function theEliminator(constestants, loser) {
+  for(let i = 0; i < contestants.length; i++) {
+    if(contestants[i] === loser)
+      constestants.splice(i, 1)
+  }
+  return constestants
+}
+
+let updatedContestants = theEliminator(contestants, loser);
 
 
 ////////////////// PROBLEM 17 ////////////////////
@@ -260,6 +332,7 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+
 
 
 ////////////////// PROBLEM 18 ////////////////////
@@ -273,6 +346,9 @@ let sampleString = "Hi, my name is Kylo."
   return 'must provide a valid email address'
 */
 
+
+
+
 ////////////////// PROBLEM 19 ////////////////////
 /*
   Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
@@ -280,6 +356,7 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+
 
 
 ////////////////// PROBLEM 20 ////////////////////
@@ -290,6 +367,7 @@ let sampleString = "Hi, my name is Kylo."
 //CODE HERE
 
 
+
 ////////////////// PROBLEM 21 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 /*
@@ -297,6 +375,7 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 */
 
 //CODE HERE
+
 
 
 ////////////////// PROBLEM 22 ////////////////////
