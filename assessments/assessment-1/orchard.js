@@ -199,27 +199,26 @@ console.log(`Pink Acres Tons per day of week: ${pinkTons}`);
 // CODE HERE 
 console.log(fujiTons); // [13, 19.5, 19.5, 13, 13, 13, 6.5]
 
-let fujiPounds = [];
-let galaPounds = [];
-let pinkPounds = [];
+let fujiPounds = 0;
+let galaPounds = 0;
+let pinkPounds = 0;
 let sum = 0;
 // Needs fixed, printing out NaN ??
-for (let i = 0; i < fujiTons.length; i++) {
-    fujiPounds.push(fujiTons[i] * 2000);
-    for (let i = 0; i < fujiTons.length; i++) {
-        sum += fujiTons[i];
-    }
-}
+for (let i = 0; i < 7; i++) {
+    fujiPounds += fujiTons[i];
+    galaPounds += galaTons[i];
+    pinkPounds += pinkTons[i];
 
-for (let i = 0; i < galaTons.length; i++) {
-    galaPounds.push(galaTons[i] * 2000);
-}
+    if(i === 7 - 1) {
+        fujiPounds *= 2000;
+        galaPounds *= 2000;
+        pinkPounds *= 2000;
+    }    
+ }
 
-for (let i = 0; i < pinkTons.length; i++) {
-    pinkPounds.push(pinkTons[i] * 2000);
-}
 
-console.log(sum);
+
+console.log(fujiPounds);
 console.log(galaPounds);
 console.log(pinkPounds);
 
