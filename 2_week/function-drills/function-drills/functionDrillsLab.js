@@ -325,14 +325,19 @@ let updatedContestants = theEliminator(contestants, loser);
 
 
 ////////////////// PROBLEM 17 ////////////////////
-let sampleString = "Hi, my name is Kylo."
 /*
   Write a function that takes in one argument, a string. The function should then console.log that string, in entirely uppercase characters.
   Invoke the function, passing in the sampleString (above).
 */
 
 //CODE HERE
+let sampleString = "Hi, my name is Kylo."
 
+function makeUppercase(str) {
+  console.log(str.toUpperCase())
+}
+
+makeUppercase(sampleString)
 
 
 ////////////////// PROBLEM 18 ////////////////////
@@ -346,7 +351,15 @@ let sampleString = "Hi, my name is Kylo."
   return 'must provide a valid email address'
 */
 
+function emailCheck(email) {
+  email = String(email).trim()
 
+  if (email.includes('@')) {
+    return 'email verified'
+  } else {
+    return 'must provide a valid email address'
+  }
+}
 
 
 ////////////////// PROBLEM 19 ////////////////////
@@ -356,7 +369,11 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+function frogPurchaser(gold) {
+  return gold / 3
+}
 
+let totalFrogs = frogPurchaser(100)
 
 
 ////////////////// PROBLEM 20 ////////////////////
@@ -365,21 +382,43 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+function frogPurchaser2(gold) {
+  if (gold % 3 === 0) {
+    return gold / 3
+  } else if ((gold - 1) % 3 === 0) {
+    return (gold - 1) / 3
+  } else {
+    return (gold - 2) / 3
+  }
+}
 
+let totalFrogs2 = frogPurchaser2(100)
 
 
 ////////////////// PROBLEM 21 ////////////////////
-let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 /*
   Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
 */
 
 //CODE HERE
+let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 
+function checkArrayAscending(arr) {
+  let comparisonValue = arr[0]
+  for (let i = 1; i < arr.length - 1; i++) {
+    if (arr[i] <= comparisonValue) {
+      return false
+    } else {
+      comparisonValue = arr[i]
+    }
+  }
+  return true
+}
+
+let arrayIsAscending = checkArrayAscending(sampleArray)
 
 
 ////////////////// PROBLEM 22 ////////////////////
-
 let duck = "cute";
 
 function bathroom() {
@@ -393,20 +432,18 @@ function pond() {
   let realDuck = "fluffy";
 }
 
-/*
-  There are 4 variables above: duck, rubberDuck, sailorDuck and realDuck.
-  All within different scopes.
-  Given the functions and variables above, edit the arrays below to contain only the appropriate variable names (as strings).
-*/
-
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ["duck"]
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ["duck", "rubberDuck"]
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ["duck", "sailorDuck", "rubberDuck"]
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ["duck", "realDuck"]
+
+
+
+
