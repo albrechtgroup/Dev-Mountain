@@ -215,3 +215,70 @@
 
 // 3. Remove the parameter parentheses
 a => a + 100;
+
+
+
+// Wednesday's Demo Lecture:
+onst add = (num1,num2) => num1 + num2
+
+const subtract = (num1,num2) => num1 - num2
+
+const multiply = (num1,num2) => num1 * num2
+
+const divide = (num1,num2) => num1 / num2
+
+const calculator = (num1,num2,cb) => {
+  //checking to see if input is coercible to a number
+  if(+num1 && +num2){
+    num1 = Number(num1)
+    num2 = +num2
+    return cb(num1,num2)
+  } else {
+    return console.log(`please provide numbers only`)
+  }
+}
+
+console.log(calculator(10,2,divide)) 
+console.log(calculator(10,'2',multiply))
+
+
+const applyPercentDiscount = (product,discount) => {
+    product.displayPrice = product.basePrice * (1 - discount)
+}
+
+const applyFlatDiscount = (product,discount) => {
+  product.displayPrice = product.basePrice - discount
+}
+
+//higher-order method that allows us to write a loop once and apply discounts
+const applyDiscounts = (arr,cb,discount) => {
+  for(let i = 0;i < arr.length;i++){
+    cb(arr[i],discount)
+  }
+}
+
+// applyDiscounts(dogProducts,applyFlatDiscount,1)
+// applyDiscounts(catProducts,applyPercentDiscount,.20)
+
+//apply discount by categories
+const discountByCategory = (arr,cb,discount,category) => {
+  for(let i =0;i < arr.length;i++){
+    if(arr[i].category === category){
+      cb(arr[i],discount)
+    }
+  }
+}
+
+discountByCategory(dogProducts,applyFlatDiscount,2,1)
+discountByCategory(catProducts,applyPercentDiscount,.10,2)
+console.log(dogProducts)
+console.log(catProducts)
+
+
+const applyDiscountByInventory = (arr,cb,discount,amount) => {
+  for(let i =0;i < arr.length;i++){
+    if(arr[i].inventory < amount){
+      cb(arr[i],discount)
+    }
+  }
+}
