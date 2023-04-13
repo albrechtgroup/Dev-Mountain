@@ -1,4 +1,4 @@
-// Write your code below
+// Write your code here
 function isPalindrome(word) {
   let j = word.length - 1
   for (let i = 0; i < (word.length - 1) / 2; i++) {
@@ -9,3 +9,4 @@ function isPalindrome(word) {
   }
   return true
 }
+
