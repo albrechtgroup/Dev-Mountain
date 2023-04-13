@@ -4,16 +4,15 @@ let numbers = [40, 68, 14, 90, 49];
 // ***** Do not edit the code above *****
 
 ////////// PROBLEM 1 //////////
-
 /* 
     Use forEach method to loop though all the elements in the 'numbers' array above, and divide each element (number) by 2. Print the result in console.
 */
 
 // CODE HERE
+numbers.forEach((number) => console.log(number / 2));
 
 
 ////////// PROBLEM 2 //////////
-
 /* 
     Use a built-in Javascript method that will loop through the 'numbers' array above, divide each number by 2, and then return a NEW ARRAY.
 
@@ -23,10 +22,11 @@ let numbers = [40, 68, 14, 90, 49];
 */
 
 // CODE HERE
+let result = numbers.map((number) => number / 2);
+console.log(result);
 
 
 ////////// PROBLEM 3 //////////
-
 // ***** Do not edit the code below *****
 let cities = [
   "Tokyo",
@@ -50,10 +50,12 @@ let cities = [
 */
 
 // CODE HERE
+let cityEndsWithI = cities.filter(
+    (city) => city.charAt(city.length - 1) === "i"
+);
 
 
 ////////// PROBLEM 4 //////////
-
 // ***** Do not edit the code below *****
 let fruits = [
   {
@@ -86,7 +88,21 @@ let fruits = [
 */
 
 // CODE HERE
-
+fruits.forEach((item) => {
+  if (item.color === "red") {
+    return console.log(
+      `The fruit with index ${fruits.indexOf(item)} is an apple`
+    );
+  } else if (item.color === "orange") {
+    return console.log(
+      `The fruit with index ${fruits.indexOf(item)} is an orange`
+    );
+  } else {
+    return console.log(
+      `The fruit with index ${fruits.indexOf(item)} is neither apple or orange`
+    );
+  }
+});
 
 
 /* 
@@ -102,9 +118,7 @@ let fruits = [
 // COPY AND PASTE THE RESULT FROM YOUR CONSOLE (NODE CONSOLE IS YOUR TERMINAL) HERE (AS A MULTI LINES COMMENT)
 
 
-
 ////////// PROBLEM 5 //////////
-
 // ***** Do not edit the code below *****
 let foods = [
   {
@@ -145,7 +159,11 @@ let foods = [
 */
 
 // CODE HERE
-
+totalFoodsWithRice = foods.filter((food) => {
+    return food.tags.includes("meat")
+}).reduce((a, food) => {
+    return a + food.price
+}, 0)
 
 // THE TOTAL
-
+46
