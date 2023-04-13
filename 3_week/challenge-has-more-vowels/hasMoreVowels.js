@@ -19,7 +19,7 @@ const hasMoreVowels = word => {
   return false
 }
 
-// hasMoreVowels('moose')
-// hasMoreVowels('Aal')
-// hasMoreVowels('yay')
-// hasMoreVowels('mice')
+hasMoreVowels('moose')
+hasMoreVowels('Aal')
+hasMoreVowels('yay')
+hasMoreVowels('mice')
