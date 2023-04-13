@@ -1,24 +1,31 @@
-// ***** Do not edit the code below *****
-// Please refer to this array to solve problems 1 and 2
-let numbers = [40, 68, 14, 90, 49];
-// ***** Do not edit the code above *****
+console.log("== Arr Methods 2 ==");
 
 ////////// PROBLEM 1 //////////
 /* 
-    Use forEach method to loop though all the elements in the 'numbers' array above, and divide each element (number) by 2. Print the result in console.
+    Use forEach method to loop though all the 
+    elements in the 'numbers' array above, and 
+    divide each element (number) by 2. Print the 
+    result in console.
 */
 
 // CODE HERE
+let numbers = [40, 68, 14, 90, 49];
+
 numbers.forEach((number) => console.log(number / 2));
 
 
 ////////// PROBLEM 2 //////////
 /* 
-    Use a built-in Javascript method that will loop through the 'numbers' array above, divide each number by 2, and then return a NEW ARRAY.
+    Use a built-in Javascript method that will loop 
+    through the 'numbers' array above, divide each 
+    number by 2, and then return a NEW ARRAY.
 
-    HINT: .forEach() vs .map() ---- which one does return a new array?
+    HINT: .forEach() vs .map() ---- which one does 
+    return a new array?
 
-    NOTE: make sure you save the code in a variable, then console.log the variable to see the new array.
+    NOTE: make sure you save the code in a variable, 
+    then console.log the variable to see the new 
+    array.
 */
 
 // CODE HERE
@@ -28,6 +35,15 @@ console.log(result);
 
 ////////// PROBLEM 3 //////////
 // ***** Do not edit the code below *****
+/* 
+    Use the filter method on 'cities' array to 
+    return a new array of city/cities that end(s) 
+    with letter "i."
+
+    Make sure you save the code in a variable. Then, 
+    console.log the variable to see the new array.
+*/
+
 let cities = [
   "Tokyo",
   "Jakarta",
@@ -43,12 +59,6 @@ let cities = [
 ];
 // ***** Do not edit the code above *****
 
-/* 
-    Use the filter method on 'cities' array to return a new array of city/cities that end(s) with letter "i."
-
-    Make sure you save the code in a variable. Then, console.log the variable to see the new array.
-*/
-
 // CODE HERE
 let cityEndsWithI = cities.filter(
     (city) => city.charAt(city.length - 1) === "i"
@@ -56,6 +66,23 @@ let cityEndsWithI = cities.filter(
 
 
 ////////// PROBLEM 4 //////////
+/* 
+    Using forEach method, identify each element of 
+    the 'fruits' array above if it's an apple or 
+    orange by its color. If the color is red, print 
+    "The fruit with index [THE ELEMENT'S INDEX] is 
+    an apple." If the color is orange, print 
+    "The fruit with index [THE ELEMENT INDEX] is 
+    an orange." If the color is not red or apple, 
+    print "The fruit with index [THE ELEMENT'S 
+    INDEX] is neither apple or orange."
+
+    Note: do a google search on how to find an 
+    element's index of an array in Javascript. 
+    There is a built-in Javascript method that would 
+    help you find an index of an element in an array.
+*/
+
 // ***** Do not edit the code below *****
 let fruits = [
   {
@@ -79,13 +106,6 @@ let fruits = [
     price: 3,
   },
 ];
-// ***** Do not edit the code above *****
-
-/* 
-    Using forEach method, identify each element of the 'fruits' array above if it's an apple or orange by its color. If the color is red, print "The fruit with index [THE ELEMENT'S INDEX] is an apple." If the color is orange, print "The fruit with index [THE ELEMENT INDEX] is an orange." If the color is not red or apple, print "The fruit with index [THE ELEMENT'S INDEX] is neither apple or orange."
-
-    Note: do a google search on how to find an element's index of an array in Javascript. There is a built-in Javascript method that would help you find an index of an element in an array.
-*/
 
 // CODE HERE
 fruits.forEach((item) => {
@@ -104,9 +124,9 @@ fruits.forEach((item) => {
   }
 });
 
-
 /* 
-    Run the code in node to see the result. Then, copy and paste the result below.
+    Run the code in node to see the result. Then, 
+    copy and paste the result below.
 
     NOTE: the result should look like this:
     The fruit with index 0 is neither apple or orange
@@ -115,10 +135,18 @@ fruits.forEach((item) => {
     The fruit with index 3 is an apple  
 */
 
-// COPY AND PASTE THE RESULT FROM YOUR CONSOLE (NODE CONSOLE IS YOUR TERMINAL) HERE (AS A MULTI LINES COMMENT)
+// COPY AND PASTE THE RESULT FROM YOUR CONSOLE 
+// (NODE CONSOLE IS YOUR TERMINAL) HERE 
+// (AS A MULTI LINES COMMENT)
 
 
 ////////// PROBLEM 5 //////////
+/* 
+    Count the total price of foods that have "rice" 
+    tag. Please type the result too.
+*/
+
+
 // ***** Do not edit the code below *****
 let foods = [
   {
@@ -152,13 +180,7 @@ let foods = [
     tags: ["meat", "rice"],
   },
 ];
-// ***** Do not edit the code above *****
 
-/* 
-    Count the total price of foods that have "rice" tag. Please type the result too.
-*/
-
-// CODE HERE
 totalFoodsWithRice = foods.filter((food) => {
     return food.tags.includes("meat")
 }).reduce((a, food) => {
