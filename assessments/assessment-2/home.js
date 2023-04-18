@@ -56,9 +56,8 @@ function canWeDeliver(zipcode) {
     for(let i = 0; i < deliveryAreaZipCodes.length; i++) {
         if(deliveryAreaZipCodes[i] === zipcode) {
             return `You're in our delivery zone!`;
-        } else {
+        }   
             return `Sorry, we can't deliver to that address`;
-        }  
     }
 }
 
