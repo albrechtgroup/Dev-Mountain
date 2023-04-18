@@ -31,7 +31,7 @@ console.log("*===> menu.js <===*");
 */
 
 //CODE HERE
-const pizza = {
+let pizza = {
     name: 'Margharita',
     price: 19.99,
     category: 'Entree',

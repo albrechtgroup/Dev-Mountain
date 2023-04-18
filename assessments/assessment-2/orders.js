@@ -58,7 +58,7 @@ class Ticket {
 */
 
 //CODE HERE
-const firstTicket = new Ticket(['Pizza', 'Dessert', 'Soda'], '7:03 PM', 313);
+let firstTicket = new Ticket(['Pizza', 'Dessert', 'Soda'], '7:03 PM', 313);
 console.log(firstTicket.customerId); // 313
 
 /*
