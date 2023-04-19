@@ -1,62 +1,28 @@
+// Get the HTML Element:
 let themeBtns = document.querySelectorAll('.theme-button');
 let body = document.querySelector('body');
 let main = document.querySelector('main');
 let btns = document.querySelector('button');
 
+// Create Callback:
 let themeSelector = (event) => {
     let theme = event.target.textContent;
+    console.log(event.target);
 
+    body.className = theme;
+    main.className = main;
+    for(let i = 0; i < btns.length; i++) {
+        btns[i].className = theme;
+    }
+};
+
+for(let i = 0; i < themeBtns.length; i++) {
+    themeBtns[i].addEventListener('click', themeSelector);
 }
 
-
-// //// ==> D.J. Code ////
-// console.log('hello world')
-
-// const counterText = document.querySelector('#counter')
-
-// const minusBtn = document.querySelector('#minus-btn')
-// const resetBtn = document.querySelector('#reset-btn')
-// const plusBtn = document.querySelector('#plus-btn')
-
-// let count = 0;
-
-// function increase() {
-//     count++
-//     counterText.textContent = count
-//     // console.log(count)
-// }
-
-// function decrease() {
-//     count--
-//     counterText.textContent = count
-//     // console.log(count)
-// }
-
-// function reset() {
-//     count = 0
-//     counterText.textContent = count
-//     // console.log(count)
-// }
-
-
-// minusBtn.addEventListener('click', decrease)
-// resetBtn.addEventListener('click', reset)
-// plusBtn.addEventListener('click', increase)
-
-// const themeBtns = document.querySelectorAll('.theme-buttons')
-
-// for (let i = 0; i < themeBtns.length; i++) {
-//     themeBtns[i].addEventListener('click', selectTheme)
-// }
-
-// function selectTheme(event) {
-//     const theme = event.target.textContent
-//     document.querySelector('body').className = theme
-//     document.querySelector('main').className = theme
-    
-//     const buttons = document.querySelectorAll('button')
-
-//     for (let i = 0; i < buttons.length; i++) {
-//         buttons[i].className = theme;
-//     }
-// }
+// Creating a New Element:
+for(let i = 0; i < 10; i++) {
+    let p = document.createElement('p');
+    p.textContent = "I am a createdElement <p> tag!!";
+    main.appendChild(p);
+}
