@@ -1,47 +1,69 @@
 ////////////////////////////////////////////////
 //THE TEST SERVER IS RUNNING ON LOCALHOST:3000//
 ////////////////////////////////////////////////
-
+// alert("Connected!!!")
 // PROBLEM 1
 /*
-    In the index.html file in this folder there is a button with an id of 'say-hello-button'!
-
-    Use querySelector to select that button and save it to a variable called sayHelloButton
+    In the index.html file in this folder there is a 
+    button with an id of 'say-hello-button'!
+    Use querySelector to select that button and save 
+    it to a variable called sayHelloButton
 */
 
-// CODE HERE
-
+// CODE HERE:
+const sayHelloButton = document.querySelector('#say-hello-button');
 
 // PROBLEM 2
 /*
-    Create a function that changes sayHelloButton's background color to black and its text color to white (you can use the .style object or create a CSS class and use classList.add)
-    
-    Attach a mouseover event to sayHelloButton that calls the function you wrote
+    Create a function that changes sayHelloButton's 
+    background color to black and its text color to 
+    white (you can use the .style object or create 
+    a CSS class and use classList.add)    
+    Attach a mouseover event to sayHelloButton that 
+    calls the function you wrote
 */
 
 // CODE HERE
+function changeColor() {
+    sayHelloButton.style.backgroundColor = 'black';
+    sayHelloButton.style.color = 'white';
+
+}
+
+sayHelloButton.addEventListener('mouseover', changeColor);
 
 
 // PROBLEM 3
 /*
-    Now you can see that the button colors change, but they do not change back when we take the mouse off of the button.
+    Now you can see that the button colors change, 
+    but they do not change back when we take the 
+    mouse off of the button. Write another function 
+    that changes the button back to its original 
+    colors. #EFEFEF for the background and black 
+    for the text.
 
-    Write another function that changes the button back to its original colors. #EFEFEF for the background and black for the text.
-
-    Attach another listener that fires your second function when the mouseout event occurs on the button
+    Attach another listener that fires your second 
+    function when the mouseout event occurs on the 
+    button
 */
 
 // CODE HERE
+function changeBack() {
+    sayHelloButton.style.backgroundColor = '#EFEFEF';
+    sayHelloButton.style.color = 'black';
+}
+
+sayHelloButton.addEventListener('mouseout', changeBack);
 
 
 // PROBLEM 4
 /*
-    Now lets see if we can make a request to our server when we click the button
-
-    Add a 3rd event listener to sayHelloButton and trigger the sayHello function when the button is clicked
+    Now lets see if we can make a request to our 
+    server when we click the button Add a 3rd 
+    event listener to sayHelloButton and trigger 
+    the sayHello function when the button is clicked
 */
 
-// DO NOT EDIT FUNCTION
 const sayHello = () => {
     axios.get('http://localhost:3000/say-hello').then((res) => {
         let helloText = document.getElementById('hello-text');
@@ -50,24 +72,31 @@ const sayHello = () => {
         helloText.textContent = res.data;
     })
 }
-// DO NOT EDIT FUNCTION
 
 // CODE HERE
+sayHelloButton.addEventListener('click', sayHello);
 
 
 // PROBLEM 5 
 /*
-    Now that we have attached a few event listeners why dont we try adding a request? 
-    
-    Below you will find an event listener on a button. 
-    
-    Use axios inside the ohMy function to make a GET request to 'http://localhost:3000/animals' 
-    
-    Handle the promise that's returned with a .then, which you should pass a callback function to. Inside the callback function, console.log the response's data (in the intermediate instructions we'll come back to this function and add HTML).
+    Now that we have attached a few event listeners 
+    why dont we try adding a request? Below you 
+    will find an event listener on a button. Use axios 
+    inside the ohMy function to make a GET request 
+    to 'http://localhost:3000/animals' Handle the 
+    promise that's returned with a .then, which 
+    you should pass a callback function to. Inside 
+    the callback function, console.log the 
+    response's data (in the intermediate 
+    instructions we'll come back to this function 
+    and add HTML).
 */ 
 
 const ohMy = () => {
-    // YOUR CODE HERE
+    return axios.get('http://localhost:3000/animals')
+    .then(res => {
+        return res.data
+    })
 }
 
 document.getElementById('animals-button').addEventListener('click', ohMy)
@@ -75,15 +104,22 @@ document.getElementById('animals-button').addEventListener('click', ohMy)
 
 // PROBLEM 6 
 /*
-    Now lets see if you can send a request param! inside repeatMyParam function below  make get request to 'http://localhost:3000/repeat/{SOMEPARAM}', but with a string instead of {SOMEPARAM}.  
-
-    The function that runs when this request is made will return whatever parameter you sent 
-
-    Handle the promise returned from the request with a .then, which will take in a callback -- the callback function should print the response.data.
+    Now lets see if you can send a request param! 
+    inside repeatMyParam function below  make get 
+    request to 'http://localhost:3000/repeat/{SOMEPARAM}', 
+    but with a string instead of {SOMEPARAM}. The 
+    function that runs when this request is made 
+    will return whatever parameter you sent Handle 
+    the promise returned from the request with a 
+    .then, which will take in a callback -- the 
+    callback function should print the response.data.
     
-    Outside of the function, select the button with the id "repeat-button" and add a click event listener that calls the repeatMyParam function.
+    Outside of the function, select the button with 
+    the id "repeat-button" and add a click event 
+    listener that calls the repeatMyParam function.
     
-    We'll be updating this function in the next problem.
+    We'll be updating this function in the next 
+    problem.
 */
 
 const repeatMyParam = () => {
