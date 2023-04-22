@@ -1,0 +1,61 @@
+body {
+    background-image: url('https://images.unsplash.com/photo-1599033153041-e88627ca70bb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fGJyb29rbHlufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1000&q=60');
+    background-size: cover;
+    padding: 20px;
+    font-family: Gill Sans, 'sans-serif';
+}
+
+nav {
+	display: flex;
+	justify-content: space-evenly;
+	border-bottom: 2px solid orange;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+ol {
+	padding-left: 0;
+}
+
+.crumb {
+	margin-right: 2em;
+	display: inline;
+}
+
+a {
+	color: orange;
+}
+
+a:visited {
+	color: blue;
+}
+
+.header {
+    padding: 30px;
+    color: white;
+    backdrop-filter: blur(9px);
+    border: 3px solid black;
+    text-align: center;
+    
+}
+
+.neighborhood-buttons button {
+    font-family: Gill Sans, 'sans-serif';
+    font-weight: bold;
+	display: inline-flex;
+	justify-content: space-evenly;
+	border-radius: 13px;
+	padding: 15px;
+    background-color: yellow;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-evenly;
+	border-top: 2px solid orange;
+	padding-top: 10px;
+  	position: absolute;
+  	bottom: 0;
+  	width: 50%;
+  	height: 2.5rem;            /* Footer height */
+}

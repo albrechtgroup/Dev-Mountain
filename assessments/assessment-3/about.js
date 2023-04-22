@@ -1,14 +1,17 @@
-console.log("hello world");
+console.log("home.js connected");
 
+const form = document.querySelector('#contact');
+const image = document.querySelector('img');
 
 
 function handleSubmit(evt) {
 	evt.preventDefault();
 	
-	console.log('form submit');
+	alert('Your FORM has been Submitted');
 }
 
 
-let form = document.querySelector('#contact');
-
-form.addEventListener('submit', handleSubmit);
+form.addEventListener('click', handleSubmit);
+image.addEventListener('mouseover', () => {
+	alert('You are amazing and apart of something special!!!');
+});
