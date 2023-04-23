@@ -1,8 +1,8 @@
 // Get the HTML Element:
-let themeBtns = document.querySelectorAll('.theme-button');
-let body = document.querySelector('body');
-let main = document.querySelector('main');
-let btns = document.querySelector('button');
+const themeBtns = document.querySelectorAll('.theme-button');
+const body = document.querySelector('body');
+const main = document.querySelector('main');
+const btns = document.querySelector('button');
 
 // Create Callback:
 let themeSelector = (event) => {
