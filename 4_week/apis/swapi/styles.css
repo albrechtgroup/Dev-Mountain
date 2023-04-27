@@ -1,0 +1,9 @@
+body {
+    background-color: navy;
+}
+
+.container {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
