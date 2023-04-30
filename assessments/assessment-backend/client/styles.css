@@ -1,42 +1,32 @@
 body {
 	font-family: 'Roboto Mono', monospace;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 100vh;
 	background: #1f1b29;
+    padding-top: 150px;
 }
 
 .navBar {
     position: fixed;
     top: 0; /* Position the navbar at the top of the page */
     width: 100%; /* Full width */
-    align-items: center;
-	justify-content: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1;
 }
 
-/* body {
-    background-color: aqua;
-    font-size: larger;
-    text-align: center;
-} */
+.container {
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
 h1 {
     font-family: cursive;
     color: whitesmoke;
 }
 
-/* .dadJoke {
-    text-align: center;
-    max-height: 350px;
-    max-width: 350px;
-} */
-
 #jokes {
     color: whitesmoke;
 }
-
-
 
 button {
 	background: none;
@@ -53,4 +43,14 @@ button:hover {
 	color: white;
 	box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
 	transform: translateY(-0.25em);
+}
+
+.footer {
+    font-family: cursive;
+    background-color: whitesmoke;
+    position: fixed;
+    bottom: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+    justify-content: center;
+    text-align: center;
 }

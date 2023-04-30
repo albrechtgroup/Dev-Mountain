@@ -1,6 +1,7 @@
 const complimentBtn = document.getElementById("complimentButton")
 const fortuneBtn = document.getElementById("fortuneButton");
 const dadJokeButton = document.querySelector('#dadJokeButton');
+// const tetrisBtn = document.querySelector('#tetrisButton')
 
 const getCompliment = () => {
     axios.get("http://localhost:4000/api/compliment/")
