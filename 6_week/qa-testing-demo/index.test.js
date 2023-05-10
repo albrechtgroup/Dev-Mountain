@@ -17,16 +17,15 @@ let testData = {
   }
 
 // Basic Test:
- 
 test("should run basic test", () => {
   expect(2).toBe(2);
 });
-//to showcase we can use javascript functions and access data from testData
+// to showcase we can use javascript functions and access data from testData
 test("first name should be patten", () => {
   expect(testData.firstName.toLowerCase()).toBe("patten");
 });
 
-//describe-block for formatTitle
+// describe-block for formatTitle
 describe("formatTitle test", () => {
 
   test("formatTitle should returns a string", () => {
@@ -41,7 +40,7 @@ describe("formatTitle test", () => {
   
 });
 
-//describe-block for shorten-bio 
+// describe-block for shorten-bio 
 describe('shorten-bio tests', () => {
 
     test('shorten-bio shortens a string', () => {
@@ -56,7 +55,7 @@ describe('shorten-bio tests', () => {
     })
 })
 
-//describe block for convert-length
+// describe block for convert-length
 describe('convert length tests', () => {
 
   test('convertLength returns an array with two items in it', () => {
@@ -72,14 +71,14 @@ describe('convert length tests', () => {
   })
 })
 
-//this will pass
+// this will pass
 test('toBe vs toEqual', () => {
   const myObj = {myNum:4}
   const myObjTwo = {myNum:4}
   expect(myObj).toEqual(myObjTwo)
 })
 
-//this will fail
+// this will fail
 test('toBe vs toEqual', () => {
   const myObj = {myNum:4}
   // const myObjThree = myObj
