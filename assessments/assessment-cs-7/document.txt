@@ -1,0 +1,93 @@
+_Array Size_ | _'doublerAppend' Time_ | _'doublerInsert' Time_ 
+             |                        |
+tinyArray    |     0.016391           |    0.000837
+smallArray   |     0.177742           |    0.040303
+mediumArray  |     1.620655           |    1.213342
+largeArray   |    14.862282           |   11.196279
+extraLargeArray | 38.245932           |   42.816422
+
+> As the size of the input array increases, both 
+ 'doublerAppend' and 'doublerInsert' take more Time
+  to complete the doubling operation. The number of
+  iterations increases with the size of the array.
+
+> 'doublerInsert' consistently takes more time to 
+  complete the doubling operation because it is 
+  using the .unshift() method.
+
+> While both functions have increased execution times
+  with larger arrays, 'doublerAppend' scales better 
+  in terms of performance for all array sizes.
+
+> In summary, the doublerAppend function scales 
+  better than the doublerInsert function. It consistently
+  exhibits faster execution times for doubling every 
+  number in the array, regardless of the array size.
+
+***************************************************
+> FOR EXTRA CREDIT: 
+  Upon research;
+  
+"The reason why the doublerInsert function is slower 
+compared to doublerAppend is primarily due to the 
+difference in the time complexity of the operations 
+involved."
+
+"In JavaScript, arrays are typically implemented as 
+dynamic arrays, which means that elements are stored 
+in contiguous memory locations. When an element is 
+inserted at the beginning of the array, such as with 
+the unshift method used in doublerInsert, all existing 
+elements need to be shifted to make room for the new 
+element."
+
+"Shifting elements in an array requires reassigning 
+memory locations for each element, which becomes 
+increasingly costly as the size of the array grows. 
+Specifically, shifting n elements in an array takes 
+O(n) time complexity. In the case of doublerInsert, 
+for each element in the input array, the function 
+needs to shift all previously inserted elements to 
+accommodate the new element at the beginning. This 
+results in a nested loop structure, leading to a 
+quadratic time complexity of O(n^2)."
+
+"On the other hand, the doublerAppend function appends 
+the doubled numbers at the end of the array. Appending 
+elements to the end of an array is a constant time 
+operation, as it does not require shifting existing 
+elements. Therefore, the time complexity of doublerAppend 
+is linear (O(n)), as it only needs to iterate through 
+the input array once to double each element and append 
+it to the new array."
+
+"In summary, the slower performance of doublerInsert 
+compared to doublerAppend is due to the inherent 
+cost of shifting elements in an array. The unshift 
+operation in doublerInsert results in a quadratic 
+time complexity, while the push operation in doublerAppend 
+has a linear time complexity. Choosing the appropriate 
+operation based on the specific use case and understanding 
+the associated time complexity is crucial for optimizing 
+performance when working with arrays."
+
+***************************************************
+> ADDITIONAL EXTRA CREDIT:
+
+> addToZero function: The space complexity is O(n) 
+  since we use a Set to store the numbers, where n 
+  is the number of elements in the input array.
+
+> hasUniqueChars function: The space complexity is 
+  O(k), where k is the number of unique characters 
+  in the word. We use a Set to store the unique 
+  characters.
+
+> isPangram function: The space complexity is O(l), 
+  where l is the number of unique letters in the 
+  sentence. We use a Set to store the unique letters.
+
+> findLongestWord function: The space complexity is 
+  O(1) because we only store the longestLength variable 
+  to keep track of the longest word length, and it 
+  doesn't depend on the input size.
